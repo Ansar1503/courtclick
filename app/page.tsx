@@ -1,15 +1,23 @@
-import { Layout} from "antd";
-import Sidebar from "./components/sidebar";
-const {  Content } = Layout;
+"use client";
 
+import { useState } from "react";
+import { Layout } from "antd";
+import Sidebar from "@/components/sidebar";
+
+const { Content } = Layout;
 
 export default function Home() {
+  const [activeTab, setActiveTab] = useState("clients");
+
   return (
     <Layout className="min-h-screen">
-      <Sidebar />
+      <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
+
       <Layout className="bg-white">
         <Content className="p-8">
-          <h1 className="text-2xl font-bold text-gray-900">Certified True Copy</h1>
+          <div >
+            
+          </div>
         </Content>
       </Layout>
     </Layout>
